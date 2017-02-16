@@ -15,3 +15,9 @@ def board_list(request):
         'board_list': Board.objects.all(),
 
     })
+
+def board_detail(request, pk):
+    board = get_object_or_404(Board, pk=pk)
+    return render(request, 'board/board_detail.html', {
+        'board' : board
+    })

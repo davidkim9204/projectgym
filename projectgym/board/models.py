@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Board(models.Model):
     title = models.CharField(max_length = 50)
-    photo = models.ImageField()
+    photo = models.ImageField(blank= True)
     category = models.CharField(max_length = 20)
     instruction = models.TextField()
     outcomes = models.TextField()

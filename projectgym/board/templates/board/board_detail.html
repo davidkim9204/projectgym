@@ -1,0 +1,19 @@
+{% extends "board/layout.html" %}
+
+{% block content %}
+    <h1>{{ board.title }}</h1>
+
+    {{ board.category |linebreaks }}
+
+    {% if board.photo %}
+        <img src="{{ board.photo.url }}" style="max-width: 100%;" />
+    {% endif %}
+    
+    {{ board.instruction |linebreaks }}
+    {{ board.outcomes |linebreaks }}
+    {{ board.links |linebreaks }}
+    {{ board.created_at |linebreaks }}
+
+    <hr/>
+
+{% endblock %}
