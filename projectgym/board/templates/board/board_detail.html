@@ -1,6 +1,7 @@
 {% extends "board/layout.html" %}
 
 {% block content %}
+<center>
     <h1>{{ board.title }}</h1>
 
     {{ board.get_category_display |linebreaks }}
@@ -16,4 +17,22 @@
 
     <hr/>
 
+    <ul>
+    {% for comment in board.comment_set.all %}
+    <li>
+        {{ comment.message }}
+        <small>by {{ comment.user }}</small>
+        <small>at {{ comment.updated_at }}</small>
+        <a href="/board/{{ board.pk }}/comments/{{ comment.pk }}/edit/">수정</a>
+        <a href="{% url "board:comment_delete" board.pk comment.pk %}">삭제</a>
+    </li>
+    {% endfor %}
+    </ul>
+
+
+    <a href="/board/" class="btn btn-primary">목록</a>
+    <!--<a href="/board/{{ board.pk }}/edit/" class="btn btn-primary">수정</a>-->
+    <a href="{% url "board:comment_new" board.pk %}" class="btn btn-default">댓글쓰기</a>
+
+</center>
 {% endblock %}
