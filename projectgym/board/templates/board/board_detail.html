@@ -1,0 +1,15 @@
+{% extends "board/layout.html" %}
+
+{% block content %}
+    <h1>{{ post.name }}</h1>
+
+
+    {% if post.photo %}
+        <img src="{{ post.photo.url }}" style="max-width: 100%;" />
+    {% endif %}
+    
+    {{ post.guide|linebreaks }}
+    {{ post.effect|linebreaks }}
+    {{ post.link|linebreaks }}
+
+{% endblock %}

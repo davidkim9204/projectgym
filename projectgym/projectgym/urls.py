@@ -19,5 +19,5 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^board/', include('board.urls')),
+    url(r'^board/', include('board.urls', namespace = 'board')),
 ]
