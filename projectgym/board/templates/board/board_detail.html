@@ -1,21 +1,37 @@
 {% extends "board/layout.html" %}
 
 {% block content %}
+<<<<<<< HEAD
 <center>
     <h1>{{ board.title }}</h1>
 
     {{ board.get_category_display |linebreaks }}
 
+=======
+<center class="board_detail_line">
+        <h1 class="board_detail_line", style="font-family: KBIZ한마음고딕 B">"{{ board.title }}"<br><br></h1>
+    <span style="font-family: KBIZ한마음고딕 B">
+        <br>
+        <h4 style="font-family: KBIZ한마음고딕 B">{{ board.get_category_display}} 운동 중 하나입니다.<h4>
+    </span>
+>>>>>>> 9c0bdeb4cd27cafce6e88234b7c2b20294e3171d
     {% if board.photo %}
         <img src="{{ board.photo.url }}" style="max-width: 100%;" />
     {% endif %}
-    
+    <h4 style="font-family: KBIZ한마음고딕 B">운동 방법</h4>
     {{ board.instruction |linebreaks }}
+    <br>
+    <h4 style="font-family: KBIZ한마음고딕 B">운동 효과</h4>
     {{ board.outcomes |linebreaks }}
-    <a href="http://{{board.links}}">영상보기</a>
+
+    <br>
+    <a style="font-family: KBIZ한마음고딕 B", href="http://{{board.links}}">***영상보기***</a>
+    <br>
+    <br>
     {{ board.created_at |linebreaks }}
 
     <hr/>
+<<<<<<< HEAD
 
     <ul>
     {% for comment in board.comment_set.all %}
@@ -34,5 +50,7 @@
     <!--<a href="/board/{{ board.pk }}/edit/" class="btn btn-primary">수정</a>-->
     <a href="{% url "board:comment_new" board.pk %}" class="btn btn-default">댓글쓰기</a>
 
+=======
+>>>>>>> 9c0bdeb4cd27cafce6e88234b7c2b20294e3171d
 </center>
 {% endblock %}

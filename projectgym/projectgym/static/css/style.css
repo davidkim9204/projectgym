@@ -151,7 +151,19 @@ table { background: #fff; }
 /*
  * Header
  */
-
+.board_detail_contents{
+    border-style: solid;
+    border-width: 1px;
+}
+.board_detail_line{
+    border-bottom: 3px solid lightgrey;
+}
+.board_detail_box{
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid lightgrey
+}
 .header{
    background: #fff;
    border-bottom: 2px solid #eaeaea;
@@ -1064,7 +1076,7 @@ div.ppt { display:none !important; }
  */
 
 .banner {
-   background: url('../img/banner.jpg') center center repeat-x; 
+   background: url('../img/banner2.jpg') center center repeat-x; 
    text-align: center;
 }
 
@@ -1147,7 +1159,7 @@ div.ppt { display:none !important; }
    margin: 0 auto;
    margin-top: 30px;
    padding: 12px 15px;
-   background: #fff;
+   background: #000;
    border: 1px solid #eaeaea;
    border-radius: 4px;
    
