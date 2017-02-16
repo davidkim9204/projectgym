@@ -4,7 +4,8 @@ from django.utils import timezone
 # Create your models here.
 
 class Board(models.Model):
-    title = models.CharField(max_length = 50)
+    title = models.CharField(max_length = 50, unique = True)
+    slug=models.SlugField(allow_unicode=True)
     photo = models.ImageField(blank= True)
     category = models.CharField(max_length=1,
         choices=(

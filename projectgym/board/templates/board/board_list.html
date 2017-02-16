@@ -6,8 +6,11 @@
                 <tbody>
                 {% for board in board_list%}
                     <tr>
-                        <td>{{board.pk }}</td>
-                        <td><a href='#'>{{board.title}}</a> </td>
+                        <td>{{board.pk}}</td>
+                        <td><a href="{% url "board:board_detail" board.pk %}">
+                                {{ board.title }}
+                            </a> 
+                        </td>
                         <td>{{board.get_category_display}}</td>
                         <td>{{board.created_at}}</td>
                     </tr>

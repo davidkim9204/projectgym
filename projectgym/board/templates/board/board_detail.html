@@ -3,7 +3,7 @@
 {% block content %}
     <h1>{{ board.title }}</h1>
 
-    {{ board.category |linebreaks }}
+    {{ board.get_category_display |linebreaks }}
 
     {% if board.photo %}
         <img src="{{ board.photo.url }}" style="max-width: 100%;" />
