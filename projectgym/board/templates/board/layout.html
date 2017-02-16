@@ -1,1 +1,5 @@
 {% extends "layout.html" %}
+
+{% block navbar-brand %}
+    <a class="navbar-brand" href="{% url "board:board_list" %}">listd</a>
+{% endblock %}

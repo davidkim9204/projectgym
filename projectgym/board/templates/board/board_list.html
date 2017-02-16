@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        
-            {% for board in board_list%}
-            <tr>
-                <td>{{board.title}} </td>
-                <td>{{board.created_at}}</td>
-            </tr>
-            {% endfor %}
-        
-    </body>
+{% extends "board/layout.html" %}
+
+{% block content %}
+    <hr/>
+        <table class="table table-bordered table-hover">
+                <tbody>
+                {% for board in board_list%}
+                    <tr>
+                        <td>{{board.pk }}</td>
+                        <td>{{board.title}} </td>
+                        <td>{{board.created_at}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+    <hr/>
 </html>
+{% endblock %}

@@ -13,5 +13,9 @@ def main(request):
 def board_list(request):
     return render(request, 'board/board_list.html',{
         'board_list': Board.objects.all(),
+        })
 
+def board_new(request):
+    return render(request, 'board/board_form.html', {
+        'form': form,
     })
