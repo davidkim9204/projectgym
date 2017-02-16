@@ -151,7 +151,19 @@ table { background: #fff; }
 /*
  * Header
  */
-
+.board_detail_contents{
+    border-style: solid;
+    border-width: 1px;
+}
+.board_detail_line{
+    border-bottom: 3px solid lightgrey;
+}
+.board_detail_box{
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid lightgrey
+}
 .header{
    background: #fff;
    border-bottom: 2px solid #eaeaea;
@@ -1581,4 +1593,76 @@ div.ppt { display:none !important; }
    margin-bottom: 0;
    margin-left: 270px;
    font-size: 24px;
-   line-height: 3
+   line-height: 30px;
+}
+
+.inner-page .blog .blog-post .entry hr {
+   width: 70px;
+   margin-top: 12px;
+   margin-bottom: 12px;
+   margin-left: 270px;
+}
+
+.inner-page .blog .blog-post .entry p {
+   margin-left: 270px;
+   font-size: 14px;
+   line-height: 26px;
+   color: #9a9a9a;
+   text-align: justify;
+}
+
+.inner-page .blog .pagination { margin: 0; }
+.inner-page .blog .sidebar-widget{
+   margin-bottom: 30px;
+   padding: 15px;
+   background: #fff;
+   border: 1px solid #eee;
+   border-radius: 4px;
+}
+
+.inner-page .blog .sidebar-widget h4 {
+   margin-top: 0;
+   margin-bottom: 13px;
+   padding-bottom: 8px;
+   border-bottom: 4px double #eee
+}
+
+.inner-page .blog .sidebar-widget ul li { margin-top: 10px; }
+.inner-page .blog .sidebar-widget ul li i {
+   position: relative;
+   top: 1px;
+   display: inline-block;
+   margin-right: 3px;
+   font-size: 16px;
+}
+   
+.inner-page .blog .sidebar-widget ul li a { font-size: 13px;   line-height: 20px; }
+.inner-page .blog .sidebar-widget p { font-size: 13px; color: #9a9a9a; }
+.inner-page .blog .sidebar-widget .social { margin-top: 9px; }
+.inner-page .blog .sidebar-widget .social a i {
+   width: 35px;
+   height: 35px;
+   line-height: 35px;
+   margin: 0;
+   margin-right: 2px;
+   font-size: 14px;
+   border-radius: 50px;
+}
+
+.inner-page .blog .sidebar-widget a.btn{
+   margin-right: 5px;
+   margin-bottom: 10px;
+}
+
+/* 
+ * Single Blog Page
+ * Comments CSS
+ */
+
+.inner-page .blog-post .comments .title h5{ margin-top: 0; font-size: 20px; }
+.inner-page .blog-post .comments .comment-list{ list-style-type: none; padding-left: 0; }
+.inner-page .blog-post .comments .comment-list li{
+   margin-bottom: 20px;
+   padding: 20px;
+   background: #fff;
+   border-left: 2px s
