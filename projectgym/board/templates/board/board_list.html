@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+{% extends "board/layout.html" %}
+
+{% block content %}
+    <hr/>
+        <table class="table table-bordered table-hover">
+                <tbody>
+                {% for board in board_list%}
+                    <tr>
+                        <td>{{board.pk }}</td>
+                        <td>{{board.title}} </td>
+                        <td>{{board.created_at}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+    <hr/>
+</html>
+{% endblock %}
+=======
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,3 +39,4 @@
         </table>
     </body>
 </html>
+>>>>>>> 2288924245ad4834cef8adf7a80229658e79b21c
