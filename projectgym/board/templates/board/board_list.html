@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "board/layout.html" %}
 
 {% block content %}
@@ -16,3 +17,25 @@
     <hr/>
 </html>
 {% endblock %}
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <table>
+            {% for board in board_list%}
+            <tr>
+                <td><a href='#'>{{board.title}}</a> </td>
+                <td>{{board.get_category_display}}</td>
+                <td>{{board.created_at}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+>>>>>>> 2288924245ad4834cef8adf7a80229658e79b21c
