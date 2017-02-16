@@ -13,13 +13,9 @@ def main(request):
 def board_list(request):
     qs = Board.objects.all()
 
-    q = request.GET.get('q', '')
-    if q:
-        try:
-            category = Board.CATEGORY_DICT[q]
-            qs = qs.filter(category=category)
-        except KeyError:
-            pass
+    category = request.GET.get('category', '')
+    if category:
+        qs = qs.filter(category=category)
     return render(request, 'board/board_list.html',{
         'board_list': qs,
     })
