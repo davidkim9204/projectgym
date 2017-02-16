@@ -5,7 +5,7 @@ from board.models import Board
 
 class BoardAdmin(admin.ModelAdmin):
     search_fields =  ['title']
-    list_display = ['title', 'category','created_at']
+    list_display = ['id','title', 'category','created_at']
     list_display_links = ['title']
     list_filter=['created_at']
 
