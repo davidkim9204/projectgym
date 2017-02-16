@@ -11,9 +11,18 @@ def main(request):
 
 
 def board_list(request):
+    qs = Board.objects.all()
+
+    q = request.GET.get('q', '')
+    if q:
+        try:
+            category = Board.CATEGORY_DICT[q]
+            qs = qs.filter(category=category)
+        except KeyError:
+            pass
     return render(request, 'board/board_list.html',{
-        'board_list': Board.objects.all(),
-        })
+        'board_list': qs,
+    })
 
 def board_new(request):
     return render(request, 'board/board_form.html', {

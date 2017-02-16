@@ -1,8 +1,21 @@
 {% extends "board/layout.html" %}
 
 {% block content %}
+
     <hr/>
         <table class="table table-bordered table-hover">
+                <center>
+                    <div id="toolbar">
+                    <form id="changelist-search" method="get">
+                        <div><!-- DIV needed for valid HTML -->
+                            <label for="searchbar"><img src="/static/admin/img/search.svg" alt="Search" /></label>
+                                <input type="text" size="40" name="q" value="" id="searchbar" autofocus />
+                                <input type="submit" value="부위별 검색" />
+                        </div>
+                    </form>
+                </div>
+                </center>
+                </hr>
                 <tbody>
                 {% for board in board_list%}
                     <tr>
